@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <!--  meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+ 
+   
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Como aprendi a manejar</title>
+
+   <link rel="stylesheet" href="mplyr_style.css">
+</head>
+
+
+<body>
+
+    <!--  Demo songs-->
+    <audio  id="audio-demo-1">
+        <source src="./media/Don_Gibson-Sweet_Dreams_demo.ogg" type="audio/ogg">
+        <source src="./media/Don_Gibson-Sweet_Dreams_demo.mp3" type="audio/mpeg">
+      
+      </audio>
+
+      <audio  id="audio-demo-2">
+        <source src="./media/Roy_Orbison-Dream_Baby_demo.ogg" type="audio/ogg">
+        <source src="./media/Roy_Orbison-Dream_Baby_demo.mp3" type="audio/mpeg">
+      
+      </audio>
+      <audio   id="audio-demo-3">
+        <source src="./media/Righteous_Brothers-Unchained_Melody_demo.ogg" type="audio/ogg">
+        <source src="./media/Righteous_Brothers-Unchained_Melody_demo.mp3" type="audio/mpeg">
+      
+      </audio>
+
+
+      <!--  Full songs-->
+
+      <audio  id="audio-1">
+        <source src="./media/Don_Gibson-Sweet_Dreams.ogg" type="audio/ogg">
+        <source src="./media/Don_Gibson-Sweet_Dreams.mp3" type="audio/mpeg">
+      
+      </audio>
+
+      <audio  id="audio-2">
+        <source src="./media/Roy_Orbison-Dream_Baby.ogg" type="audio/ogg">
+        <source src="./media/Roy_Orbison-Dream_Baby.mp3" type="audio/mpeg">
+      
+      </audio>
+      <audio   id="audio-3">
+        <source src="./media/Righteous_Brothers-Unchained_Melody.ogg" type="audio/ogg">
+        <source src="./media/Righteous_Brothers-Unchained_Melody.mp3" type="audio/mpeg">
+      
+      </audio>
+
+
+    <div class="video-container" id="video-container">
+        <iframe src="https://player.vimeo.com/video/551313974?badge=0&controls=false&title=0&autoplay=true"
+        allow="autoplay" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+            
+    </div>
+ 
+
+    <div class="container-fluid"  id="hidden_container">      
+
+            <div class="container" style="background-color: rgba(23, 88, 10, 0);">
+
+                <div class="d-flex justify-content-center" style="background-color: rgba(0, 0, 255, 0);">
+                    <div class="d-inline-flex p-2" style="background-color: rgba(255, 0, 13, 0);">
+                        <h1></h1>
+                        <p></p>
+                        <button id="My_btn" class="btn btn-light" > play </button>
+                        
+                        
+
+                    </div>
+                </div>
+
+               
+        </div>
+
+ 
+    </div>
+
+ 
+ 
+    <div id="container-playerX" class="jumbotron d-flex align-items-center min-vh-100 max-vh-100">
+         
+    <div id= "container-player" class="container">
+        <div class="d-flex justify-content-center">
+        <h2 id="titulo-player">Elije una canción</h2>
+        </div>
+        <div class="d-flex justify-content-center">
+        <div id="myCarousel" class="carousel slide  w-50 "   data-bs-ride="carousel" data-bs-interval="false">
+       
+
+         
+            
+       <div class="carousel-inner">
+         <div class="carousel-item active" id="s1">
+           <img class="d-block w-100" src="https://pngimg.com/uploads/vinyl/vinyl_PNG102.png" alt="First slide" >
+           <div class="carousel-caption">
+              <h2>Sweet Dreams</h2>
+              <p class="fuente-autor">Don Gibson</p>
+               </div>
+               <div class="d-flex justify-content-center" id="btn-play1" >
+               <button class="myButton"></button>
+            </div>
+         </div>
+        
+         <div class="carousel-item" id="s2">
+           <img class="d-block w-100" src="https://pngimg.com/uploads/vinyl/vinyl_PNG3.png" alt="Second slide" >
+           <div class="carousel-caption">
+              <h2>Dream Baby</h2>
+              <p class="fuente-autor">Roy Orbison</p>
+           </div>
+           <div class="d-flex justify-content-center" id="btn-play2" >
+            <button class="myButton"></button>
+         </div>
+         </div>
+         <div class="carousel-item" id="s3">
+           <img class="d-block w-100" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25d45014-8cc3-4c98-b02c-5a0cf3a55ddd/ddhbo8x-6ef4cc08-aab0-497e-af68-3665ecd0931e.png/v1/fill/w_865,h_865,strp/vinyl_record_on_a_transparent_background__by_prussiaart_ddhbo8x-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODY1IiwicGF0aCI6IlwvZlwvMjVkNDUwMTQtOGNjMy00Yzk4LWIwMmMtNWEwY2YzYTU1ZGRkXC9kZGhibzh4LTZlZjRjYzA4LWFhYjAtNDk3ZS1hZjY4LTM2NjVlY2QwOTMxZS5wbmciLCJ3aWR0aCI6Ijw9ODY1In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.N09IN1GovLf67FdpH8ZnKZxqI6_AFp0uEx2spA-wn7Q" alt="Third slide">
+           <div class="carousel-caption">
+             <h2>Unchained Melody</h2>
+             <p class="fuente-autor">Righteous Brothers</p> 
+          </div>
+          <div class="d-flex justify-content-center" id="btn-play3" >
+            <button class="myButton"></button>
+         </div>
+         </div>
+       </div>
+      
+       <button class="carousel-control-prev" data-bs-target="#myCarousel" type="button" data-bs-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span>
+       </button>
+       <button class="carousel-control-next" data-bs-target="#myCarousel" type="button" data-bs-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span>
+       </button>
+       
+       
+      </div>
+      
+    </div>
+   
+      </div>
+         
+       
+
+    </div>
+
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+<script type="text/javascript" src="mplyr_script.js"></script>
+</body>
+
+</html>
